@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fukushima Server CPanel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container" id="auth-container">
+        <div class="auth-box">
+            <h1>Fukushima CPanel</h1>
+            <p>Masukkan kata sandi untuk melanjutkan</p>
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Masuk</button>
+            <p class="error" id="auth-error"></p>
+        </div>
+    </div>
+
+    <div class="container" id="main-container" style="display: none;">
+        <header>
+            <h1>Fukushima Server CPanel</h1>
+            <button id="logout-btn">Logout</button>
+        </header>
+
+        <div class="server-form">
+            <h2>Buat Server Baru</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Masukkan username">
+            </div>
+            <div class="form-group">
+                <label>Pilih Plan:</label>
+                <div class="plan-selector">
+                    <button class="plan-btn" data-plan="1gb">1GB</button>
+                    <button class="plan-btn" data-plan="2gb">2GB</button>
+                    <button class="plan-btn" data-plan="3gb">3GB</button>
+                    <button class="plan-btn" data-plan="4gb">4GB</button>
+                    <button class="plan-btn" data-plan="5gb">5GB</button>
+                    <button class="plan-btn" data-plan="6gb">6GB</button>
+                    <button class="plan-btn" data-plan="7gb">7GB</button>
+                    <button class="plan-btn" data-plan="8gb">8GB</button>
+                    <button class="plan-btn" data-plan="9gb">9GB</button>
+                    <button class="plan-btn" data-plan="10gb">10GB</button>
+                    <button class="plan-btn" data-plan="unlimited">Unlimited</button>
+                </div>
+            </div>
+            <button id="create-btn">Buat Server</button>
+        </div>
+
+        <div class="loading-container" id="loading-container">
+            <div class="spinner"></div>
+            <p>Membuat server, harap tunggu...</p>
+        </div>
+
+        <div class="result-container" id="result-container">
+            <h2>Server Berhasil Dibuat!</h2>
+            <div class="server-info">
+                <div class="info-row">
+                    <span class="info-label">ID Server:</span>
+                    <span id="server-id" class="info-value"></span>
+                    <button class="copy-btn" data-target="server-id"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Username:</span>
+                    <span id="server-username" class="info-value"></span>
+                    <button class="copy-btn" data-target="server-username"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Password:</span>
+                    <span id="server-password" class="info-value"></span>
+                    <button class="copy-btn" data-target="server-password"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">RAM:</span>
+                    <span id="server-ram" class="info-value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">CPU:</span>
+                    <span id="server-cpu" class="info-value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Disk:</span>
+                    <span id="server-disk" class="info-value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Web Panel:</span>
+                    <span id="server-web" class="info-value"></span>
+                    <button class="copy-btn" data-target="server-web"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Dibuat:</span>
+                    <span id="server-created" class="info-value"></span>
+                </div>
+            </div>
+            <div class="notes">
+                <h3>Catatan:</h3>
+                <ul>
+                    <li>1x Replace</li>
+                    <li>SS Bukti .DONE</li>
+                    <li>Hubungi Owner kalau ada masalah</li>
+                    <li>Jangan pakai SC DDOS</li>
+                    <li>Jangan DDOS DOMAIN</li>
+                    <li>Jangan sebar domain</li>
+                </ul>
+                <p class="warning">RUSUH? DELETE NO REFF!</p>
+            </div>
+            <button id="new-server-btn">Buat Server Baru</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
