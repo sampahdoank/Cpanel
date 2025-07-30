@@ -61,12 +61,6 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "regions": ["hnd1"],  
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  },
+  "regions": ["hnd1"],
   "public": true
 }
